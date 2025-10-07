@@ -1,0 +1,54 @@
+.table-ref {
+  color: white;
+}
+
+.text-white {
+  text-decoration: none;
+  color: white;
+}
+
+.add-media-container {
+  display: flex;
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  gap: 3rem;
+  justify-content: center;
+}
+
+.show-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-card h1 {
+  color: var(--secondary-color);
+}
+
+.data-container {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-link-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.infos-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.database-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.database-info p {
+  margin-bottom: 1rem;
+}

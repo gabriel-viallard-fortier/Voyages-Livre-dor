@@ -1,0 +1,188 @@
+
+#logo {
+    height: 25vh;
+    justify-content: center;
+    border-radius: 50%;
+    border:solid 1px black;
+    margin: 2rem auto;
+    box-shadow: red 4px 4px 15px, yellow 2px 2px 10px, rgb(51, 162, 4) -4px -10px 25px;
+}
+.img {
+    text-align: center;
+}
+form {
+    display: grid;
+    width: 80%;
+    color: whitesmoke;
+}
+a:hover {
+    text-shadow: 10px 10px 10px rgba(255, 255, 255, 0.445);
+    text-decoration:underline black 1px;
+}
+fieldset{
+    border: 5px double black;
+    border-radius: 20px;
+    padding: 5%;
+    margin: auto auto;
+    gap: 1rem;
+    width: 50vw;
+    display: grid;
+    grid-template: 60% 40%;
+    align-items: center;    
+}
+legend {
+    background-color: rgba(32,32,32,.75);
+    font-size: 1.5rem;
+    color: rgb(135, 255, 88);
+    border-radius: 10px;
+    padding: 4%;
+    box-shadow: 10px 10px 10px rgba(255, 0, 0, 0.373);
+}
+
+h1 
+{
+    text-align: center;
+} 
+li, a {
+    font-size: 1rem;
+    margin: auto auto;
+    z-index: 1;
+    
+}
+li p {
+    color: white;
+    padding-left: 2rem;
+}
+
+/* .menu {
+    margin: 1rem auto;
+    text-align: left;
+    padding : 2.5%;
+    width: 90vw;
+    border-radius: 10px;
+    background-image: linear-gradient(157deg, rgba(17, 156, 225, 0.592), rgba(255, 255, 255, 0.205), rgba(31,31, 255,.6));
+    border: solid black 2px;
+    
+} */
+.forms {
+    margin: auto auto;
+}
+
+fieldset button {
+    
+    grid-column: span 3;
+    height: 40px;
+    width: 180px;
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: black;
+    background-image: linear-gradient(157deg, rgba(212, 220, 51, 0.9), rgba(20, 151, 147, 0.609), rgb(167, 162, 25));
+}
+fieldset button:hover {
+        transform: scale(1.04, 1.07);
+
+        background-image: linear-gradient(157deg, rgba(51, 220, 74, 1), rgba(20, 151, 147, 1), rgba(25, 167, 58, 1));
+
+    }
+fieldset p {
+grid-column: 2;
+font-size: 1rem;
+}
+label {
+    grid-column: 1;
+    font-size: 1.1rem;
+    width: 70%;
+    color: black;
+}
+textarea {
+    height: 300px;
+    font-size: 1.2rem;
+}
+input {
+    box-shadow:rgb(0, 0, 0) 4px 4px 4px;
+    padding-left:10px;
+    background-color: rgba(255, 255, 255, 0.542);
+    grid-column: 2 ;
+    color: rgb(0, 0, 0);
+    border: solid 2px black;
+    height: 2.4rem;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+input:hover {
+    border: 2px solid lightblue;
+}
+input[checkbox] {
+    height: 1rem;
+}
+input:focus {
+    outline: none;
+    background-image: linear-gradient(44deg, rgba(136, 64, 64, 0.545), rgba(140, 57, 57, 0.47), rgba(127, 55, 55, 0.171));
+}
+.input-valid {
+    border: solid 2px rgb(135, 255, 88);
+}
+.input-invalid {
+    border: solid 2px red;
+}
+#Connection, #Inscription {
+    margin: auto auto;
+    padding: 7%;
+}
+
+
+
+body {
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+    display:block;
+    background-image: linear-gradient(79deg,rgb(0, 0, 0), rgb(4, 156, 206),cyan, rgb(17, 156, 225) ,rgb(0, 0, 0));
+    background-repeat: no-repeat;
+    height: 150%;
+    width: 100vw;
+    align-items: center;
+    justify-content: start;
+
+}
+.little {
+    display: flex;
+    grid-column: 2 ;
+    width: 30%;
+
+}
+.margin-2 {
+    margin: 1rem;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.text-white {
+    color: white;
+}
+.comment {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px cyan;
+    width: 50vw;
+    margin: auto auto; 
+    padding: 2%;
+}
+.comment-content {
+    font-size : 1.4rem;
+}
+.p-2 {
+    padding: 2rem;
+}
+.p-10 {
+    padding: 15%;
+}
