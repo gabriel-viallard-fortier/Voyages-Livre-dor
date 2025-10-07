@@ -39,8 +39,8 @@ h1
 }
 .menu {
     bottom: 0;
-
     position: relative;
+    z-index: 10;
 }
 li, a {
     font-size: 1rem;
