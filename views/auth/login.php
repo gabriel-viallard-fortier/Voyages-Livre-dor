@@ -1,19 +1,8 @@
-
-            
-<!-- <div class="form-group">
-    <input type="email" id="email" name="email" required
-    value="<?php echo escape(post('email', '')); ?>"
-    placeholder="votre@email.com">
-</div> -->
-
-<p><?= $_SESSION['message'] ?></p>
 <div class="forms">
-    <div class="auth-header">
-        <h1>
-            <p>Connectez-vous à votre compte</p>
-        </h1>
+    <div class="p-2">
+        <h1>Connectez-vous à votre compte</h1>
     </div>
-    <form id="connection" name="login_form" method="post" action="<?php echo url('auth/login'); ?>">
+    <form class="forms p-2" id="connection" name="login_form" method="post" action="<?php echo url('auth/login'); ?>">
         <input type="hidden" name="csrf_token" value="<?php echo csrf_token(); ?>">
         <fieldset>
             <legend><?php e($title); ?></legend>
@@ -24,9 +13,8 @@
             <button type="submit" name="ok">Envoyer</button>
         </fieldset>
         <div class="center">
-            <p class="text-black">Pas encore de compte ?
+            <p class="p-2 text-black">Pas encore de compte ?
                 <a href="<?php echo url('auth/register'); ?>">S'inscrire</a>
             </p>
         </div>
     </form>
-</div>

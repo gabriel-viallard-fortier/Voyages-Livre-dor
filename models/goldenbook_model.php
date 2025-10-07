@@ -4,7 +4,7 @@ function post_comment($comment, $user_id, $date) {
     
     $query = $dbco->prepare('INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES (?,?,?)');
     if ($query->execute(array($comment, $user_id, $date))) {
-        return true;
+    return true;
     }
     return false;
 }

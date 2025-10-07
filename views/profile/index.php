@@ -1,10 +1,11 @@
 
-        <?= $_SESSION['message'] ?>
-        <div class="forms">
+<div class="p-2 text-black">
+    <h1>Modifiez votre compte</h1>
+</div>
             <form id="Inscription" method="post">
                 <fieldset>
                     <legend><b>Profil</b></legend>
-                    <p id="form-msg"><b>Veuillez remplir ces informations</b></p>
+                    <input type="hidden" name="csrf_token" value="<?php echo csrf_token(); ?>">
 
                     <label for="login">Login :</label>
                     <input tabindex="0" required type="text" id="login" name="login" value="<?= htmlspecialchars($_SESSION['user']['login']) ?>">
@@ -28,11 +29,6 @@
 
                     <label for="password1">Nouveau mot de passe :</label>
                     <input tabindex="0" required type="password" name="password1" id="password1">
-                    
-                    <span class="little margin-2">
-                        <input tabindex="0" id="showPassword" name="showPassword" type="checkbox">Montrer le
-                        mot de passe</span>
-                    <p id="password1Error"></p>
 
                     <label id="password2Label" for="password2">Confirmez :</label>
                     <input tabindex="0" required type="password" name="password2" id="password2">

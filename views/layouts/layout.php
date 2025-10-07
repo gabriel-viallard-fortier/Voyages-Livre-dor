@@ -66,7 +66,7 @@
                 <?php if (isset($_SESSION['user']) && $_SESSION['user']['logged'] === true): ?>
                     <li><a href="<?php echo url('goldenbook/comment'); ?>">Commentaire</a></li>
                     <li><a href="<?php echo url('profile/index'); ?>">Profil</a></li>
-                    <li><a href="<?php echo url('auth/logout'); ?>">Déconnection</a></li>
+                    <li><a href="<?php echo url('auth/deconnection'); ?>">Déconnection</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
@@ -78,6 +78,7 @@
         <?php flash_messages(); ?>
         <?php echo $content ?? ''; ?>
     </main>
+<div class="p-2">
 
     <footer class="footer">
         <div class="footer-content">
@@ -87,7 +88,8 @@
             <p>Version <?php echo APP_VERSION; ?></p>
         </div>
     </footer>
-
+</div>
+    
     <script src="<?php echo url('assets/js/app.js'); ?>"></script>
     <script src="<?php echo url('assets/js/script.js'); ?>"></script>
 </body>

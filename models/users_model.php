@@ -62,7 +62,6 @@ class User
             $insert = $this->dbco->prepare("INSERT INTO users (isAdmin, login, email, country, zip, password) VALUES (?,?,?,?,?,?)");
             // Execution de la requete avec hashage ARGON2ID du mdp
             $insert->execute(array($isAdmin, $login, $email, $country, $zip, password_hash($password, PASSWORD_BCRYPT)));
-            $_SESSION['message'] = "Utilisateur créé: " . $login . "<br>";
 
 
             // 2: Récupération des infos en BDD
@@ -86,7 +85,7 @@ class User
         }
         // Si login existe déjà on affiche une erreur
         else {
-            $_SESSION['message'] = "Email " . $email . " déjà enregistré ! <br>";
+            set_flash('error', "Email " . $email . " déjà enregistré ! <br>");
             return false;
         }
     }
@@ -109,7 +108,7 @@ class User
         // On verifie le login puis le mdp:
         // Si aucun tel login dans le resultat de la requete
         if ($result === []) {
-            $_SESSION['message'] = "Aucun utilisateur associé à cet email<br>";
+            set_flash('error', "Aucun utilisateur associé à cet email<br>");
         }
 
         // Si le login existe dans la BDD
@@ -117,7 +116,7 @@ class User
 
             // on verifie le mdp par rapport au hash dans la BDD
             if (!password_verify($password, $result[0]['password'])) {
-                $_SESSION['message'] = "Erreur: mot de passe invalide<br>";
+                set_flash('error', "Erreur: mot de passe invalide<br>");
                 return [
                     'isAdmin' => $this->isAdmin,
                     'id' => $this->getId(),
@@ -141,8 +140,6 @@ class User
                 $this->email = $result[0]['email'];
                 $this->country = $result[0]['country'];
                 $this->zip = $result[0]['zip'];
-
-                $_SESSION['message'] = "Vous êtes connectés en tant que " . $this->login . "<br>";
 
                 return [
                     'id' => $this->getId(),
@@ -169,7 +166,7 @@ class User
         }
         // sinon
         else {
-            $_SESSION['message'] = "Aucun utilisateur connecté.<br>";
+            set_flash('error',"Aucun utilisateur connecté.<br>");
         }
     }
 
@@ -207,13 +204,13 @@ class User
                                                         WHERE id=?");
                 $update->execute(array($login, $email, $country, $zip, password_hash($password, PASSWORD_BCRYPT), $this->id));
 
-                $_SESSION['message'] = "Utilisateur mis a jour avec succès.<br>";
+                set_flash('success', "Utilisateur mis a jour avec succès.<br>");
                 return true;
             } else {
-                $_SESSION["message"] = "Mot de passe actuel invalide";
+                set_flash('error', "Mot de passe actuel invalide");
             }
         } else {
-            $_SESSION['message'] = "Email " . $email . " non disponible<br>";
+            set_flash('error', "Email " . $email . " non disponible<br>");
             return false;
         }
     }

@@ -13,7 +13,8 @@ else {
 } ?>
     <?= $_SESSION['message'] ?>
 
-
-    <main>
-        <h1 class="p-10">“Un voyage est la seule chose qui s'achète et vous rend plus riche.”</h1>
+<div class="p-2">
+    <main style="background-image: url('<?= BASE_URL . "/assets/images/bali/porte-temple-hindou-bali.webp"?>');">
+        <h1 class="text-white p-10">“Un voyage est la seule chose qui s'achète et vous rend plus riche.”</h1>
     </main>
+</div>

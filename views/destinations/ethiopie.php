@@ -37,7 +37,7 @@
         <button>Read More</button>
       </div>
     </li> -->
-    <li class='item' style="background-image: url('<?= BASE_URL . "/assets/images/ethiopie/5.jpeg" ?>')">
+    <!-- <li class='item' style="background-image: url('<?= BASE_URL . "/assets/images/ethiopie/5.jpeg" ?>')">
       <div class='content'>
         <h2 class='title'>"Urban Decay"</h2>
         <p class='description'>
@@ -45,7 +45,7 @@
         </p>
         <button>Read More</button>
       </div>
-    </li>
+    </li> -->
     <li class='item' style="background-image: url('<?= BASE_URL . "/assets/images/ethiopie/6.jpg" ?>')">
       <div class='content'>
         <h2 class='title'>"The Migration"</h2>
@@ -55,14 +55,14 @@
         <button>Read More</button>
       </div>
     </li>
-        <!-- <li class='item' style="background-image: url('<?= BASE_URL . "/assets/images/ethiopie/7.webp" ?>')">
+        <li class='item' style="background-image: url('<?= BASE_URL . "/assets/images/ethiopie/7.webp" ?>')">
       <div class='content'>
         <h2 class='title'>"The Migration"</h2>
         <p class='description'> Lorem ipsum, dolor sit amet consectetur
         adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
         praesentium nisi. Id laboriosam ipsam enim.  </p>
         <button>Read More</button>
-      </div> -->
+      </div>
     <!-- </li>
         <li class='item' style="background-image: url('<?= BASE_URL . "/assets/images/ethiopie/8.avif" ?>')">
       <div class='content'>
