@@ -21,8 +21,6 @@ require_once CORE_PATH . '/view.php';
 require_once INCLUDE_PATH . '/helpers.php';
 
 // Charger les modèles
-require_once MODEL_PATH . '/user_model.php';
-require_once MODEL_PATH . '/borrow_model.php';
 require_once MODEL_PATH . '/users_model.php';
 require_once MODEL_PATH . '/goldenbook_model.php';
 
