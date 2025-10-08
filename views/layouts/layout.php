@@ -20,41 +20,43 @@
             <div class="nav-brand">
                 <a href="<?php echo url(); ?>" title="retour à l'accueil"><?php echo APP_NAME; ?></a>
             </div>
+            
             <ul class="nav-menu">
                 <li><a href="<?php echo url('home/index'); ?>">Accueil</a></li>
-                    <div class="menu text-white">
-                        <button id="perContinent">
-                            <a>Par continent</a>
-                        </button><br>
-                        <ul id="ulContinent" hidden>
-                            <li id="Afrique">Afrique
-                                <ul id="ulAfrique" hidden>
-                                    <li><a href="<?php echo url('destinations/ethiopie') ?>">Éthiopie</a></li>
-                                </ul>
-                            </li>
-                            <li>Amérique</li>
-                            <li id="Asie">Asie
-                                <ul id="ulAsie" hidden>
-                                    <li><a href="<?php echo url('destinations/bali') ?>">Bali</a></li>
-                                    <li><a href="./pays/coree-du-nord.php">Corée du Nord</a></li>
-                                    <li><a href="./pays/japon.php">Japon</a></li>
-                                </ul>
-                            </li>
-                            <li>Europe</li>
-                            <li>Océanie</li>
-                        </ul>
-                    </div>
-                    <div class="menu text-white">
-                        <button id="perProfile">
-                            <a>Par Guide</a>
-                        </button><br>
-                        <ul hidden>
-                            <li><a href="<?php echo url('destinations/ethiopie') ?>">Gabriel</a></li>
-                            <li><a href="<?php echo url('destinations/bali') ?>">Hichem</a></li>
-                            <li><a href="./pays/coree-du-nord.php">Johann</a></li>
-                            <li><a href="./pays/japon.php">Karim</a></li>
-                        </ul>
-                    </div>
+                <li class="menu text-white">
+                    <button id="perContinent">
+                        <a>Par continent</a>
+                    </button><br>
+                    <ul id="ulContinent" hidden>
+                        <li id="Afrique">Afrique
+                            <ul id="ulAfrique" hidden>
+                                <li><a href="<?php echo url('destinations/ethiopie') ?>">Éthiopie</a></li>
+                            </ul>
+                        </li>
+                        <li>Amérique</li>
+                        <li id="Asie">Asie
+                            <ul id="ulAsie" hidden>
+                                <li><a href="<?php echo url('destinations/bali') ?>">Bali</a></li>
+                                <li><a href="./pays/coree-du-nord.php">Corée du Nord</a></li>
+                                <li><a href="./pays/japon.php">Japon</a></li>
+                            </ul>
+                        </li>
+                        <li>Europe</li>
+                        <li>Océanie</li>
+                    </ul>
+                </li>
+                <li class="menu text-white">
+                    <button id="perProfile">
+                        <a>Par Guide</a>
+                    </button><br>
+                    <ul id="ulProfile" hidden>
+                        <li><a href="<?php echo url('destinations/ethiopie') ?>">Gabriel</a></li>
+                        <li><a href="<?php echo url('destinations/bali') ?>">Hichem</a></li>
+                        <li><a href="./pays/coree-du-nord.php">Johann</a></li>
+                        <li><a href="./pays/japon.php">Karim</a></li>
+                    </ul>
+                </li>
+
                 <?php if (!isset($_SESSION['user']) || $_SESSION['user']['logged'] === false): ?>
                     <li><a href="<?php echo url('auth/register'); ?>">Inscription</a></li>
                     <li><a href="<?php echo url('auth/login'); ?>">Connection</a></li>
@@ -68,6 +70,7 @@
                     <li><a href="<?php echo url('profile/index'); ?>">Profil</a></li>
                     <li><a href="<?php echo url('auth/deconnection'); ?>">Déconnection</a></li>
                 <?php endif; ?>
+                
             </ul>
         </nav>
     </header>
