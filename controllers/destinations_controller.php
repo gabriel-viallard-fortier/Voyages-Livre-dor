@@ -9,10 +9,6 @@ function destinations_ethiopie()
     ];
     load_view_with_layout('destinations/ethiopie', $data);
 }
-function get_destinations_img_path($destination) 
-{
-    return PUBLIC_PATH . "/assets/images/" . $destination . "/";
-}
 
 function destinations_bali() 
 {
@@ -23,4 +19,24 @@ function destinations_bali()
         ]
     ];
     load_view_with_layout('destinations/bali', $data);
+}
+function destinations_cdn() 
+{
+    $data = [
+        'stylesheets' => [
+            'assets/css/voyages.css',
+            'assets/css/cdn.css',
+        ]
+    ];
+    load_view_with_layout('destinations/cdn', $data);
+}
+function destinations_japon() 
+{
+    $data = [
+        'stylesheets' => [
+            'assets/css/voyages.css',
+            'assets/css/japon.css',
+        ]
+    ];
+    load_view_with_layout('destinations/japon', $data);
 }

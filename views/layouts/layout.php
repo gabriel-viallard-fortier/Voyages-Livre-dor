@@ -37,8 +37,8 @@
                         <li id="Asie">Asie
                             <ul id="ulAsie" hidden>
                                 <li><a href="<?php echo url('destinations/bali') ?>">Bali</a></li>
-                                <li><a href="./pays/coree-du-nord.php">Corée du Nord</a></li>
-                                <li><a href="./pays/japon.php">Japon</a></li>
+                                <li><a href="<?php echo url('destinations/cdn')?>">Corée du Nord</a></li>
+                                <li><a href="<?php echo url('destinations/japon')?>">Japon</a></li>
                             </ul>
                         </li>
                         <li>Europe</li>
@@ -52,8 +52,8 @@
                     <ul id="ulProfile" hidden>
                         <li><a href="<?php echo url('destinations/ethiopie') ?>">Gabriel</a></li>
                         <li><a href="<?php echo url('destinations/bali') ?>">Hichem</a></li>
-                        <li><a href="./pays/coree-du-nord.php">Johann</a></li>
-                        <li><a href="./pays/japon.php">Karim</a></li>
+                        <li><a href="<?php echo url('destinations/cdn') ?>">Johann</a></li>
+                        <li><a href="<?php echo url('destinations/japon') ?>">Karim</a></li>
                     </ul>
                 </li>
 
